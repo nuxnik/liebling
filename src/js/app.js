@@ -196,6 +196,10 @@ $(() => {
     }
   });
 
+  // set default mode to dark
+  $('html').attr('data-theme', 'dark');
+  localStorage.setItem('theme', 'dark');
+
   $toggleDarkMode.on('change', () => {
     if ($toggleDarkMode.is(':checked')) {
       $('html').attr('data-theme', 'dark');
