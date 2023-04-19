@@ -121,11 +121,10 @@
     <script>
       if (typeof Storage !== 'undefined') {
         const currentSavedTheme = localStorage.getItem('theme')
-
-        if (currentSavedTheme && currentSavedTheme === 'dark') {
-          document.documentElement.setAttribute('data-theme', 'dark')
-        } else {
+        if (currentSavedTheme && currentSavedTheme === 'light') {
           document.documentElement.setAttribute('data-theme', 'light')
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark')
         }
       }
     </script>
