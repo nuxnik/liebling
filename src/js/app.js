@@ -37,7 +37,7 @@ $(() => {
   const $mainNavLeft = $('.js-main-nav-left');
   const $newsletterElements = $('.js-newsletter');
   const $nativeComments = $('.js-native-comments > div > iframe')[0];
-  const currentSavedTheme = localStorage.getItem('theme');
+  const currentSavedTheme = localStorage.getItem('theme') || 'dark'
 
   let fuse = null;
   let submenuIsOpen = false;
@@ -195,10 +195,6 @@ $(() => {
       $searchNoResults.hide();
     }
   });
-
-  // set default mode to dark
-  $('html').attr('data-theme', 'dark');
-  localStorage.setItem('theme', 'dark');
 
   $toggleDarkMode.on('change', () => {
     if ($toggleDarkMode.is(':checked')) {
