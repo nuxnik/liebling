@@ -37,7 +37,7 @@ into the {body} of the default.hbs template --}}
       {{/if}}
     {{/if}}
   {{/post}}
-  
+
   <article>
     <div class="l-content in-post">
       {{!-- Everything inside the #post tags pulls data from the post --}}
@@ -109,6 +109,10 @@ into the {body} of the default.hbs template --}}
             </div>
           </section>
         {{/if}}
+        <section class="post-full-comments">
+          <script data-isso="//comments.nuxnik.com/" src="//comments.nuxnik.com/js/embed.min.js"></script>
+          <section id="isso-thread"></section>
+        </section>
         <section class="m-author">
           <div class="m-author__content">
             <div class="m-author__picture">
